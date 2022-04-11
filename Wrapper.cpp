@@ -62,7 +62,7 @@ void Landscape::Wrapper(WFConfig const& config)
 	an_.def_.veg_ign=config.VegIgn();
 	an_.def_.windmax=config.MaxWind();
 
-	for(int paramSet=0;paramSet<config.NParamRuns(); paramSet++) // loop through the parameter file
+	for(int paramSet=0;paramSet<config.NParamRuns(); paramSet++) // loop through the parameter file; if just want MC replicates, copy parameter file Nsim times
 	{
 		resetFire(config);
 //		cout<<"ParamSetloop? "<<paramSet<<"\n\n";
