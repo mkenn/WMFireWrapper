@@ -5,7 +5,7 @@
 /***********************************************************/
 #pragma once
 
-#include "../util/WMFireInterface.h"
+#include "../util/WMFireInterface.h" // requires copying current version of this file to the util folder one directory up
 #include "WFConfig.h"
 #include "boost/multi_array.hpp"
 
