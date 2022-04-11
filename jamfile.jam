@@ -1,0 +1,27 @@
+ project Wrapper
+  : requirements
+    <threading>multi
+    <link>static
+    <warnings>on
+    <warnings-as-errors>off
+  : default-build debug
+  : build-dir build
+;
+
+exe wrapper : [ glob *.cpp ] ../library//wmfire ;
+    
+    
+rule Wrapper_build_config ( properties * )
+{
+    local result ;
+    if <toolset>gcc in $(properties)
+    {
+        ### - do nothing
+    }
+    if <toolset>msvc in $(properties)
+    {
+    }
+    return $(result) ;
+}
+    
+#build-project test ;
